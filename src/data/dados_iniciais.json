@@ -2,18 +2,18 @@
 {
   "categorias": [
     {
-      "titulo": "Front End",
+      "titulo": "Petróleo",
       "link": "https://www.alura.com.br/formacao-front-end",
       "cor": "#6BD1FF",
       "link_extra": {
-        "text": "Formação de Front End na Alura",
+        "text": " go petr3!",
         "url": "https://www.alura.com.br/cursos-online-front-end"
       },
       "videos": [
         {
-          "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-          "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
-        },
+          "titulo": "O que faz um Geológo mucho loko?",
+          "url": "https://www.youtube.com/watch?v=VBqRPD0v6OQ"
+           },
         {
           "titulo": "SEO com React",
           "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
@@ -41,7 +41,7 @@
         {
           "titulo": "Base para aprender os frameworks",
           "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI"
-        }        
+        }
       ]
     },
     {
