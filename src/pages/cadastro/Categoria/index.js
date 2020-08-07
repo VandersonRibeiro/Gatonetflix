@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+
 function CadastroCategoria() {
   const valoresIniciais = {
     nome: '',
@@ -29,19 +30,19 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    console.log('Fora bozooo');
-    const URL= window.location.hostname.includes('localhost')
-    ? 'http://localhost:8080' 
-    : 'https://gatonetflix.herokuapp.com/categorias';
-    fetch(URL)
-      .then(async (respostaDoServer) => {
-        const resposta = await respostaDoServer.json();
-        setCategorias([
-          ...resposta,
-        ]);
-    });
-  
-  },[]);
+    if(window.location.href.includes('localhost')) {
+      const URL = 'http://localhost:8080/categorias'; 
+      fetch(URL)
+       .then(async (respostaDoServer) =>{
+        if(respostaDoServer.ok) {
+          const resposta = await respostaDoServer.json();
+          setCategorias(resposta);
+          return; 
+        }
+        throw new Error('Não foi possível pegar os dados');
+       })
+    }    
+  }, []);
 
   return (
     <PageDefault>
