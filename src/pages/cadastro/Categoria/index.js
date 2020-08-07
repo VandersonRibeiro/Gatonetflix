@@ -30,7 +30,9 @@ function CadastroCategoria() {
 
   useEffect(() => {
     console.log('Fora bozooo');
-    const URL= 'http://localhost:8080/categorias';
+    const URL= window.location.hostname.includes('localhost')
+    ? 'http://localhost:8080' 
+    : 'https://gatonetflix.herokuapp.com/categorias';
     fetch(URL)
       .then(async (respostaDoServer) => {
         const resposta = await respostaDoServer.json();
