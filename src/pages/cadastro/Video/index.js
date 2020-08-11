@@ -46,8 +46,8 @@ function CadastroVideo(){
         .then(() => {
             console.log('Cadastrou com sucesso!');
             history.push('/');
-          });
-        }}
+        });
+    }}
         >
          <FormField
           label="Título do Vídeo"
